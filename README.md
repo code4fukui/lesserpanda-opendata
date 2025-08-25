@@ -5,7 +5,7 @@
 - [さばえのレッサーパンダ](data/lesserpanda_sabae.csv)
 - [さばえのレッサーパンダ画像一覧](data/lesserpanda_sabae_photo.csv)
 - [さばえのレッサーパンダ画像](img/)
-- [さばえのレッサーパンダの鳴き声](sound/lesserpanda.mp3)
+- [さばえのレッサーパンダの鳴き声](sound/)
 
 ## 鯖江市 西山動物園
 
