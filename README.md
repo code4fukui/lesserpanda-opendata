@@ -2,12 +2,16 @@
 
 ## オープンデータ
 
-- [さばえのレッサーパンダ](data/lesserpanda_sabae.csv)
+- [さばえのレッサーパンダ一覧](data/lesserpanda_sabae.csv)
 - [さばえのレッサーパンダ画像一覧](data/lesserpanda_sabae_photo.csv)
 - [さばえのレッサーパンダ画像](img/)
 - [さばえのレッサーパンダの鳴き声](sound/)
 
-## 鯖江市 西山動物園
+## アプリ
+
+- [さばえのレッサーパンダ](https://code4fukui.github.io/lesserpanda-opendata/)
+
+## 鯖江市 西山動物園オープンデータからの加工
 
 オープンデータダウンロード
 ```sh
