@@ -1,6 +1,7 @@
 import { dir2array } from "https://js.sabae.cc/dir2array.js";
 import { unzip } from "https://taisukef.github.io/zlib.js/es/unzip.js";
 import { CSV } from "https://js.sabae.cc/CSV.js";
+import { png2jpg } from "./png2jpg.js";
 
 const fn = "data/lesserpanda_sabae.csv";
 const fnp = "data/lesserpanda_sabae_photo.csv";
@@ -21,9 +22,39 @@ const getID = (name) => {
 
 const photos = [];
 
+const unzipPhoto = async (fn, id) => {
+  let nphoto = 0;
+  const data = await Deno.readFile("temp/" + fn);
+  const zips = unzip(data);
+  const filenames = zips.getFilenames();
+  let idx = 1;
+  const imgs = ["png", "jpg", "jpeg", "jfif"];
+  for (const fn of filenames) {
+    console.log(fn);
+    const ext = getExt(fn);
+    if (!imgs.includes(ext)) continue;
+    const bin = zips.decompress(fn);
+
+    console.log(fn, bin.length);
+    const dstfn = "img/" + id + "_" + idx++ + ".jpg";
+    if (ext == "png") {
+      const jpg = png2jpg(bin);
+      await Deno.writeFile(dstfn, jpg);
+    } else {
+      await Deno.writeFile(dstfn, bin);
+    }
+    photos.push({ id, idx: idx - 1, fn: dstfn });
+    nphoto++;
+  }
+  return nphoto;
+};
+
 const files = await dir2array("temp");
 for (const fn of files) {
   if (!fn.endsWith(".zip")) continue;
+  //console.log(fn)
+  //if (fn != "レッサーパンダ画像(たいよう).zip") continue;
+  console.log(fn)
   const name = fn.substring(fn.indexOf("(") + 1, fn.lastIndexOf(")"));
   console.log(name);
 
@@ -34,28 +65,7 @@ for (const fn of files) {
   
   let nphoto = 0;
   try {
-    const data = await Deno.readFile("temp/" + fn);
-    const zips = unzip(data);
-    const filenames = zips.getFilenames();
-    let idx = 1;
-    const imgs = ["png", "jpg", "jpeg", "jfif"];
-    for (const fn of filenames) {
-      console.log(fn);
-      const ext = getExt(fn);
-      if (!imgs.includes(ext)) continue;
-      const bin = zips.decompress(fn);
-
-      console.log(fn, bin.length);
-      const dstfn = "img/" + id + "_" + idx++ + ".jpg";
-      if (ext == "png") {
-        const jpg = png2jpg(bin);
-        await Deno.writeFile(dstfn, jpg);
-      } else {
-        await Deno.writeFile(dstfn, bin);
-      }
-      photos.push({ id, idx: idx - 1, fn: dstfn });
-      nphoto++;
-    }
+    nphoto = await unzipPhoto(fn, id);
   } catch (e) {
     console.log(id, e);
   }

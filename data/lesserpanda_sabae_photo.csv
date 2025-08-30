@@ -1,5 +1,12 @@
 ﻿id,idx,fn
+taiyo,1,img/taiyo_1.jpg
+taiyo,2,img/taiyo_2.jpg
+taiyo,3,img/taiyo_3.jpg
+taiyo,4,img/taiyo_4.jpg
 kanoko,1,img/kanoko_1.jpg
+kanoko,2,img/kanoko_2.jpg
+kanoko,3,img/kanoko_3.jpg
+kanoko,4,img/kanoko_4.jpg
 kusu,1,img/kusu_1.jpg
 rara,1,img/rara_1.jpg
 pysuke,1,img/pysuke_1.jpg
@@ -15,6 +22,10 @@ chacha,1,img/chacha_1.jpg
 hisashi,1,img/hisashi_1.jpg
 shinshin,1,img/shinshin_1.jpg
 ranran,1,img/ranran_1.jpg
+kanta,1,img/kanta_1.jpg
+kanta,2,img/kanta_2.jpg
+kanta,3,img/kanta_3.jpg
+kanta,4,img/kanta_4.jpg
 meishan,1,img/meishan_1.jpg
 takashi,1,img/takashi_1.jpg
 yuyu2,1,img/yuyu2_1.jpg
@@ -37,6 +48,10 @@ kirari,2,img/kirari_2.jpg
 kirari,3,img/kirari_3.jpg
 kirari,4,img/kirari_4.jpg
 mutan,1,img/mutan_1.jpg
+kaede,1,img/kaede_1.jpg
+kaede,2,img/kaede_2.jpg
+kaede,3,img/kaede_3.jpg
+kaede,4,img/kaede_4.jpg
 reifa,1,img/reifa_1.jpg
 shunshun,1,img/shunshun_1.jpg
 teiara,1,img/teiara_1.jpg
