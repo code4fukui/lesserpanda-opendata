@@ -23,12 +23,13 @@ const downloadResourcesFromPage = async (url) => {
     const bin = await (await fetch(dllink.url)).bytes();
     await Deno.writeFile("temp/" + fn, bin);
   }
+  return links.length > 0;
 };
 
 export const downloadResources = async (url) => {
   for (let page = 1;; page++) {
     const url2 = url + "&page=" + page;
-    await downloadResourcesFromPage(url2);
+    if (!await downloadResourcesFromPage(url2)) break;
   }
 };
 

@@ -1,4 +1,5 @@
 ﻿id,idx,fn
+kanoko,1,img/kanoko_1.jpg
 kusu,1,img/kusu_1.jpg
 rara,1,img/rara_1.jpg
 pysuke,1,img/pysuke_1.jpg
@@ -23,6 +24,12 @@ chamin,1,img/chamin_1.jpg
 chata,1,img/chata_1.jpg
 minmin,1,img/minmin_1.jpg
 sakuya,1,img/sakuya_1.jpg
+matsuba,1,img/matsuba_1.jpg
+matsuba,2,img/matsuba_2.jpg
+matsuba,3,img/matsuba_3.jpg
+matsuba,4,img/matsuba_4.jpg
+matsuba,5,img/matsuba_5.jpg
+matsuba,6,img/matsuba_6.jpg
 fafa,1,img/fafa_1.jpg
 rairai,1,img/rairai_1.jpg
 kirari,1,img/kirari_1.jpg
