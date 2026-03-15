@@ -1,38 +1,44 @@
-# lesserpanda-opendata レッサーパンダオープンデータ
+# lesserpanda-opendata
 
-## オープンデータ
+This open data project contains information and resources related to lesser pandas in Sabae, Japan.
 
-- [さばえのレッサーパンダ一覧](data/lesserpanda_sabae.csv)
-- [さばえのレッサーパンダ画像一覧](data/lesserpanda_sabae_photo.csv)
-- [さばえのレッサーパンダ画像](img/)
-- [さばえのレッサーパンダの鳴き声](sound/)
+## Open Data
 
-## アプリ
+- [List of Lesser Pandas in Sabae](data/lesserpanda_sabae.csv)
+- [List of Lesser Panda Photos in Sabae](data/lesserpanda_sabae_photo.csv)
+- [Lesser Panda Photos in Sabae](img/)
+- [Sounds of Lesser Pandas in Sabae](sound/)
 
-- [さばえのレッサーパンダ](https://code4fukui.github.io/lesserpanda-opendata/)
+## App
 
-## 鯖江市 西山動物園オープンデータからの加工
+- [Lesser Pandas of Sabae](https://code4fukui.github.io/lesserpanda-opendata/)
 
-オープンデータダウンロード
+## Processing Open Data from Sabae City West Mountain Zoo
+
+Download Open Data
 ```sh
 deno -A downloadList.js
 ```
 
-リスト作成
+Create List
 ```sh
 deno -A makeList.js
 ```
 
-画像スクレイピング
+Scrape Images
 ```sh
 deno -A scrape.js
 ```
 
-画像正規化
+Normalize Images
 ```sh
 deno -A unzipPhoto.js
 ```
 
-## reference
+## Reference
 
-- [レッサーパンダ / データセット - オープンデータプラットフォーム | データカタログサイト](https://ckan.odp.jig.jp/dataset/?q=%E3%83%AC%E3%83%83%E3%82%B5%E3%83%BC%E3%83%91%E3%83%B3%E3%83%80)
+- [Lesser Panda / Dataset - Open Data Platform | Data Catalog Site](https://ckan.odp.jig.jp/dataset/?q=%E3%83%AC%E3%83%83%E3%82%B5%E3%83%BC%E3%83%91%E3%83%B3%E3%83%80)
+
+## License
+
+MIT License
