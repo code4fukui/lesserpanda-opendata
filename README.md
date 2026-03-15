@@ -1,5 +1,7 @@
 # lesserpanda-opendata
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 This open data project contains information and resources related to lesser pandas in Sabae, Japan.
 
 ## Open Data
