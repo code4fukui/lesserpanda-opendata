@@ -4,7 +4,7 @@
 
 This open data project contains information and resources related to lesser pandas in Sabae, Japan.
 
-## Open Data
+## Data / API
 
 - [List of Lesser Pandas in Sabae](data/lesserpanda_sabae.csv)
 - [List of Lesser Panda Photos in Sabae](data/lesserpanda_sabae_photo.csv)
